@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1674491763 source:c:\users\krystian\documents\projekty\tabliczkadlanadii\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	"funkcje.h"
+
+1674497281 source:c:\users\krystian\documents\projekty\tabliczkadlanadii\funkcje.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	"funkcje.h"
+
+1674492377 c:\users\krystian\documents\projekty\tabliczkadlanadii\funkcje.h
+	<iostream>
+

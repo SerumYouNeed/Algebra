@@ -1,0 +1,155 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <windows.h>
+
+using namespace std;
+
+int moj_wynik;
+int wynik_mnozenia, wynik_dzielenia, wynik_odejmowania, wynik_dodawania;
+int score =0;
+int a, b;
+int choice;
+
+void multiply()
+{
+    srand( time( NULL ) );
+    a =( rand() % 10) + 0;
+    b =( rand() % 10) + 0;
+    wynik_mnozenia = a * b;
+    cout << "Wykonaj działanie: \n";
+    cout << a << " x " << b << endl;
+    cin >> moj_wynik;
+    if(moj_wynik == wynik_mnozenia)
+    {
+        cout << "Bardzo dobrze.\n";
+        score++;
+        cout << "Masz " << score << " punktów." << endl;
+        system("pause");
+        system("cls");
+        multiply();
+    }
+    else
+    {
+        cout << "Niestety wynik jest zły." << endl;
+        cout << "Zdobywasz " << score << " punktów!" << endl;
+    }
+    exit(0);
+}
+
+void divide()
+{
+    srand( time( NULL ) );
+    a =( rand() % 100) + 0;
+    b =( rand() % 100) + 1;
+    wynik_dzielenia = a / b;
+    cout << "Wykonaj działanie: " << endl;
+    cout << a << " / " << b << endl;
+    cin >> moj_wynik;
+    if(moj_wynik == wynik_dzielenia)
+    {
+        cout << "Bardzo dobrze.\n";
+        score++;
+        cout << "Masz " << score << " punktów." << endl;
+        system("pause");
+        system("cls");
+        divide();
+    }
+    else
+    {
+        cout << "Niestety wynik jest zły." << endl;
+        cout << "Zdobywasz " << score << " punktów!" << endl;
+    }
+    exit(0);
+}
+
+void sum()
+{
+    srand( time( NULL ) );
+    a =( rand() % 50) + 0;
+    b =( rand() % 50) + 0;
+    wynik_dodawania = a + b;
+    cout << "Wykonaj działanie: \n";
+    cout << a << " + " << b << endl;
+    cin >> moj_wynik;
+    if(moj_wynik == wynik_dodawania)
+    {
+        cout << "Bardzo dobrze.\n";
+        score++;
+        cout << "Masz " << score << " punktów." << endl;
+        system("pause");
+        system("cls");
+        sum();
+    }
+    else
+    {
+        cout << "Niestety wynik jest zły." << endl;
+        cout << "Zdobywasz " << score << " punktów!" << endl;
+    }
+    exit(0);
+}
+
+void difference()
+{
+    srand( time( NULL ) );
+    a =( rand() % 100) + 0;
+    b =( rand() % 100) + 0;
+    wynik_odejmowania = a - b;
+    cout << "Wykonaj działanie: \n";
+    cout << a << " - " << b << endl;
+    cin >> moj_wynik;
+    if(moj_wynik == wynik_odejmowania)
+    {
+        cout << "Bardzo dobrze.\n";
+        score++;
+        cout << "Masz " << score << " punktów." << endl;
+        system("pause");
+        system("cls");
+        difference();
+    }
+    else
+    {
+        cout << "Niestety wynik jest zły." << endl;
+        cout << "Zdobywasz " << score << " punktów!" << endl;
+    }
+    exit(0);
+}
+
+int main()
+{
+do
+{
+cout << "Mnożenie - wybierz 1" << endl;
+cout << "Dzielenie - wybierz 2" << endl;
+cout << "Dodawanie - wybierz 3" << endl;
+cout << "Odejmowanie - wybierz 4" << endl;
+cout << "Wyjście: 0" << endl;
+cin >> choice;
+
+    switch(choice)
+        {
+        case 0:
+            cout << "Do zobaczenia wkrótce!!!" << endl;
+            return 0;
+        case 1:
+            cout << "Super!!! Mnożymy!!!" << endl;
+            multiply();
+            break;
+        case 2:
+            cout << "Super!!! Dzielimy!!!" << endl;
+            divide();
+            break;
+        case 3:
+            cout << "Super!!! Dodajemy!!!" << endl;
+            sum();
+            break;
+        case 4:
+            cout << "Super!!! Odejmujemy!!!" << endl;
+            difference();
+            break;
+
+        }
+} while(true);
+return 0;
+}
