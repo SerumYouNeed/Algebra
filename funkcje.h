@@ -16,3 +16,5 @@ void difference();
 void misc();
 void grats();
 void sorry();
+
+string log();
