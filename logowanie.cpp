@@ -1,44 +1,37 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
+using namespace std;
 
-    vector <string> users;
-    vector <string> passwords;
-
-    cout << "1. Log in: " << endl;
-    cout << "2. Create new profile: " << endl;
-
-    int log_new;
-    cin >> log_new;
-
-    switch (log_new)
+class logManager
+{
+public:
+    logManager()
     {
-        case 1:
-        case 2: log();
-
+        haveAccess = 0;
     }
 
-    string log()
+    void login()
     {
-        cout << "Please, enter user name: " << endl;
-        getline( cin, user_1, '\n' );
-        cout << "Please, enter password: " << endl;
-        getline( cin, haslo_1, '\n' );
+        cout << "Please, log in...\nUsername: ";
+        cin >> userNameTry;
 
-        return user_1, haslo_1;
+        if (userNameTry == userName)
+        {
+            cout << "Password:";
+            cin >> passwordTry;
+
+            if (passwordTry == userPassword)
+            {
+                cout << "Welcome " << userName;
+            }
+        }
     }
 
-    string user_1;
-    string haslo_1;
+private:
+    string userPassword = "psik";
+    string userName = "mysz";
+    string passwordTry;
+    string userNameTry;
+    bool haveAccess;
 
-    getline( cin, user_1, '\n' );
-    if (!user_1)
-
-
-    if( user_1=='mysz' && haslo_1=='psik' )
-        std::cout << "Gramy!" << std::endl;
-    else
-        std::cout << "Brak dostêpu" << std::endl;
-    return 0;
-}
+};
